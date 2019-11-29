@@ -1,0 +1,209 @@
+body {
+    background-color: black;
+}
+
+#canvas {
+    background: white;
+    z-index: 1;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    touch-action: none;
+    overflow: hidden;
+}
+
+#canvas-menu-button {
+    background-color: #F44336;
+
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding: 10px;
+    background: #F44336;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 1vh;
+}
+
+#canvas-undo-button {
+    background-color: rgb(88,88,88);
+
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding: 10px;
+    background: rgb(88,88,88);
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    bottom: 1vh;
+    display: none;
+}
+
+#canvas-save-button {
+    background-color: rgb(88, 88, 88);
+
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+    padding: 10px;
+    background: rgb(88, 88, 88);
+    border: none;
+    outline: none;
+
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    top: 1vh;
+    display: none;
+}
+
+#canvas-menu-button:focus {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.overlay span {
+    color: #fff;
+    font-size: 1.3em;
+    padding: 1vh;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1vh;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 0.5vh;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2vh;
+    height: 2vh;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 2vh;
+    height: 2vh;
+    background: #F44336;
+    cursor: pointer;
+}
+
+
+.slider.grey::-webkit-slider-thumb {
+    background: #999999;
+}
+
+.slider.red::-webkit-slider-thumb {
+    background: #F44336;
+}
+
+.slider.green::-webkit-slider-thumb {
+    background: #2cce0b;
+}
+
+.slider.blue::-webkit-slider-thumb {
+    background: #0b70ce;
+}
+
+#apply {
+    background-color: #F44336;
+    border-radius: 1vh;
+    border-radius: 1vh;
+    background: #F44336;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    padding: 10px;
+}
+
+#cancel, #galery {
+    background-color: rgb(88, 88, 88);
+
+    border-radius: 1vh;
+    border-radius: 1vh;
+    background: rgb(88, 88, 88);
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: .3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    padding: 10px;
+}
+
+.box {
+    width: 5vh;
+    height: 5vh;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 1vh;
+    border: 1vh solid #fff;
+}
+
+.picker {
+    width: 70%
+}
