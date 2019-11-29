@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="src/css/canvas.css">
+    <script type="text/javascript" src="src/js/pages/canvas/pickers.js"></script>
+    <script type="text/javascript" src="src/js/pages/canvas/drawer.js"></script>
+    <script type="text/javascript" src="src/js/pages/canvas/index.js"></script>
+</head>
+
+<body>
+    <canvas id="canvas" width="1" height="1"></canvas>
+    <button id="canvas-menu-button">Menu</button>
+    <button id="canvas-save-button">Save</button>
+    <button id="canvas-undo-button">Undo</button>
+    <div id="canvas-menu" class="overlay">
+        <div class="center">
+            <span>Pencil width</span>
+            <div id="pencil-width-picker" class="picker"></div>
+
+            <span>Pencil color</span>
+            <div id="pencil-color-viewer" class="box"></div>
+            <div id="pencil-color-picker" class="picker"></div>
+
+            <span>Background color</span>
+            <div id="bg-color-viewer" class="box"></div>
+            <div id="bg-color-picker" class="picker"></div>
+            <div>
+                <button id="apply">Apply</button>
+                <button id="cancel">Cancel</button>
+                <button id="galery">Galery</button>
+            </div>
+        </div>
+    </div>
+    <div id="canvas-loading" class="overlay">
+            <!-- показываем когда общение с сервером -->
+    
+    </div>
+</body>
+
+</html>
