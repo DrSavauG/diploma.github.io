@@ -1,0 +1,122 @@
+body {
+	touch-action: none;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+	display: block;
+}
+
+.gallery {
+	width: 100%;
+	position: relative;
+	display: block;
+	margin: 0 auto !important;
+}
+
+.gallery .controlls {
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	z-index: 999;
+}
+
+.gallery .controlls.prev {
+	left: 0px;
+}
+
+.gallery .controlls.next {
+	right: 0px;
+}
+
+.gallery .controlls button {
+	position: relative;
+	top: calc(50% - 25px);
+
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 0px;
+	margin: 5px;
+
+	border-radius: 100px;
+	background-color: #F44336;
+	outline: 0px;
+
+	font-size: 20px;
+	font-weight: 900;
+	color: #fff;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+
+.gallery img {
+	width: 100%;
+	margin: 0px auto;
+	object-fit: contain;
+}
+
+.gallery ul.slides {
+	height: 100%;
+	padding: 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+.gallery ul.slides li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	opacity: 0;
+
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.gallery ul.slides li.active {
+	z-index: 100;
+	opacity: 1;
+
+	-webkit-transition: all 1s ease-in;
+	transition: all 1s ease-in;
+}
+
+
+#paint-button {
+	background-color: #F44336;
+
+	border-top-right-radius: 1vh;
+	border-bottom-right-radius: 1vh;
+	padding: 10px;
+	background: #F44336;
+	border: none;
+	outline: none;
+	color: #FFF;
+	font-size: 20px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+	transition: .3s;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	z-index: 1111;
+	position: fixed;
+	left: 0;
+	top: 1vh;
+}
+
+.overlay {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+	cursor: pointer;
+}
